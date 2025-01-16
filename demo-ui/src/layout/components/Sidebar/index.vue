@@ -8,7 +8,7 @@
                 :background-color="settings.sideTheme === 'theme-dark' ? variables.menuBackground : variables.menuLightBackground"
                 :text-color="settings.sideTheme === 'theme-dark' ? variables.menuColor : variables.menuLightColor"
                 :unique-opened="true"
-                :active-text-color="settings.theme"
+                :active-text-color=variables.activeMenuBackground
                 :collapse-transition="false"
                 mode="vertical"
             >
@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import { mapGetters, mapState } from "vuex";
+import {mapGetters, mapState} from "vuex";
 import Logo from "./Logo";
 import SidebarItem from "./SidebarItem";
 import variables from "@/assets/styles/variables.scss";
